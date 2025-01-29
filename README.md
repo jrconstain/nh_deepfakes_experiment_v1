@@ -67,4 +67,6 @@ The experiment is structured to randomly assign participants into two groups: on
    - Ethical approval documents are in the `Ethics committee/` folder.
 
 ## License
-This repository is intended for academic and research purposes, then licensed under the MIT License - see the [LICENSE](LICENSE) file for details. If you use or modify this work, please cite appropriately.
+This repository is intended for academic and research purposes. If you use or modify this work, please cite appropriately.
+- The **oTree application code** is licensed under the MIT License. See the [MIT LICENSE](MIT%20LICENSE) file for details.
+- The **research documentation, datasets, and stimuli** are licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
