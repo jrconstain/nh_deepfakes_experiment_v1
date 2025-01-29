@@ -1,0 +1,55 @@
+{% extends "global/Page.html" %}
+{% load static %}
+{% block title %}Por favor, lee la siguiente publicación{% endblock %}
+
+{% block content %}
+<style>
+    p {
+        font-size: 18px; /* Ajusta este valor al tamaño que prefieras */
+    }
+    label {
+        font-size: 18px;
+    }
+</style>
+<br>
+
+<img src="/static/internet_content/images/Health related (mpox) - True.png" alt="Publicación sobre la OMS ordenando mega confinamientos por la viruela del simio" style="max-width: 450px; height: auto;">
+
+<form method="post"></form>
+
+    <p style="margin-top: 30px;"> <b> 1. Si se encontrara esta publicación en internet. ¿La compartiría con alguien a través de Messenger, WhatsApp o alguna aplicación de mensajería? </b></p>
+    <label>
+        <input type="radio" name="share_news2_priv" value="True" required>
+        Sí
+    </label><br>
+    <label>
+        <input type="radio" name="share_news2_priv" value="False">
+        No
+    </label><br><br>
+
+    <p> <b>2. Si se encontrara esta publicación en internet. ¿La compartiría en su perfil público o sus historias de Facebook, Instagram, Twitter u otra red social? </b></p>
+    <label>
+        <input type="radio" name="share_news2_pub" value="True" required>
+        Sí
+    </label><br>
+    <label>
+        <input type="radio" name="share_news2_pub" value="False">
+        No
+    </label><br><br>
+
+    <p> <b>3. ¿Qué piensa de la publicación? Por favor, deje un comentario. </b></p>
+    <textarea name="comment_news2" maxlength="300" minlength="20" rows="4" cols="50" required></textarea><br><br>    
+
+    <p> <b>4. ¿Había visto esta publicación antes? </b></p>
+    <label>
+        <input type="radio" name="seen_news2" value="True" required>
+        Sí
+    </label><br>
+    <label>
+        <input type="radio" name="seen_news2" value="False">
+        No
+    </label><br><br>
+
+    <button type="submit">Continuar</button>
+</form>
+{% endblock %}

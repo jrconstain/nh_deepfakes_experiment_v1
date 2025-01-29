@@ -1,0 +1,26 @@
+{% extends "global/Page.html" %}
+{% load static %}
+
+{% block title %}
+Información sobre la encuesta
+{% endblock %}
+
+{% block content %}
+<style>
+    p {
+        font-size: 18px; /* Ajusta este valor al tamaño que prefieras */
+    }
+</style>
+<div class="container">
+    <p style="margin-top: 40px;">
+        A continuación, se le presentará una serie de cuatro contenidos que podrían aparecer en internet y se le harán cuatro preguntas para cada uno. 
+    </p>
+    <p> 
+        La encuesta continúa con un breve cuestionario de tres preguntas y finaliza con algunas preguntas sobre usted y su uso de redes sociales.
+    </p>
+    <form method="post">
+        <button type="submit" class="btn btn-primary">Continuar</button>
+    </form>
+    
+</div>
+{% endblock %}

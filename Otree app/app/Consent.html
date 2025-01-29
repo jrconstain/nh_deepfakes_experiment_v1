@@ -1,0 +1,54 @@
+{% extends "global/Page.html" %}
+{% block title %}Consentimiento Informado{% endblock %}
+
+{% block content %}
+
+<style>
+    p {
+        font-size: 18px;
+    }
+    label {
+        font-size: 18px;
+    }
+</style>
+
+
+<h1>¡Hola! Muchas gracias por su interés. Primero, ¿está de acuerdo en participar?</h1>
+
+<p style="margin-top: 30px;">
+    La siguiente encuesta hace parte de una investigación académica que busca entender mejor cómo las personas reaccionan a distintos tipos de contenido en internet. Su participación es voluntaria y puede abandonar en cualquier momento sin consecuencias. Sus respuestas serán anónimas y confidenciales. Además, sus datos serán usados únicamente para fines académicos y tratados de acuerdo con la Ley de habeas data (Ley 1581 de 2012). No se prevén riesgos asociados a su participación.
+</p>
+<p>
+    La encuesta toma alrededor de 10 minutos. Al completarla, entrará a participar en tres sorteos de $150.000 pesos que se realizarán el viernes 11 de octubre a las 4:30 p.m. Los sorteos se transmitirán a través de internet y enviaremos el enlace para conectarse a quienes completen la encuesta. Sin embargo, no es necesario estar presente en el sorteo, ni esto afectará sus probabilidades de ganar. El único requisito para resultar ganador es haber completado la encuesta.
+</p>
+<p>
+    Si tiene alguna duda sobre la encuesta o la investigación, puede contactar al investigador principal, Juan José Rojas Constaín, en <a href="mailto:juan.constain@correounivalle.edu.co">juan.constain@correounivalle.edu.co</a>.
+</p>
+
+<form method="post">
+
+    <p> 
+    <b>Digíta el número de identificación único asignado en la invitación (el número de 4 cifras que le pedimos anotara)</b>
+    </p>
+    <input type="text" name="id_num" required>
+    <br><br>
+
+    <p>
+        <b>Al hacer clic en "Comenzar", confirmas que tienes 18 años o más y aceptas participar de manera voluntaria.</b>
+    </p>
+    <label>
+        <input type="radio" name="consent" value="True" required>
+        Sí, acepto participar y confirmo que tengo 18 años o más.
+    </label><br>
+    <label>
+        <input type="radio" name="consent" value="False">
+        No, no deseo participar.
+    </label><br><br>
+    <button type="submit">Comenzar</button>
+</form>
+
+<br><br>
+
+<img src="/static/logo1.png" alt="Logo E-SocialS" style="max-width: 250px; height: auto;">
+
+{% endblock %}

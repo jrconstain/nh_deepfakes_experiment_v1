@@ -1,0 +1,36 @@
+{% extends "global/Page.html" %}
+{% load static %}
+{% block title %}Bienvenido{% endblock %}
+
+{% block content %}
+
+<style>
+    p {
+        font-size: 18px;
+    }
+    label {
+        font-size: 18px;
+    }
+</style>
+
+<h2>Evaluación de Titular</h2>
+<p>
+    Antes que nada, nos gustaría que evaluara un titular de noticias que queremos utilizar en futuros estudios. Nos interesa saber si las personas piensan que el titular es verídico o no.
+</p>
+<br>
+<img src="/static/internet_content/images/Placebo - True.png" alt="Noticia sobre descubrimiento de nuevas especies de víboras en Colombia" style="max-width: 450px; height: auto;">
+
+
+<form method="post">
+    <p style="margin-top: 30px;"> <b>En tu opinión, ¿este titular es verídico?</b></p>
+    <label>
+        <input type="radio" name="nudge_response" value="True" required>
+        Sí, es verdadero.
+    </label><br>
+    <label>
+        <input type="radio" name="nudge_response" value="False">
+        No, es falso.
+    </label><br><br>
+    <button type="submit">Continuar</button>
+</form>
+{% endblock %}

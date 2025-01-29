@@ -1,0 +1,56 @@
+{% extends "global/Page.html" %}
+{% load static %}
+{% block title %}Por favor, mira el video{% endblock %}
+
+{% block content %}
+<style>
+    p {
+        font-size: 18px;
+    }
+    label {
+        font-size: 18px;
+    }
+</style>
+<br>
+<video width="450" controls autoplay loop>
+    <source src="/static/internet_content/videos/Cute video - Deepfake.mp4" type="video/mp4">
+    Tu navegador no soporta el elemento de video.
+</video>
+
+<form method="post">
+    <p style="margin-top: 30px;"> <b> 1. Si se encontrara este video en internet. ¿Lo compartiría con alguien a través de Messenger, WhatsApp o alguna aplicación de mensajería? </b></p>
+    <label>
+        <input type="radio" name="share_video1_priv" value="True" required>
+        Sí
+    </label><br>
+    <label>
+        <input type="radio" name="share_video1_priv" value="False">
+        No
+    </label><br><br>
+
+    <p> <b>2. Si se encontrara este video en internet. ¿Lo compartiría públicamente en su perfil o historias de Facebook, Instagram, Twitter u otra red social? </b></p>
+    <label>
+        <input type="radio" name="share_video1_pub" value="True" required>
+        Sí
+    </label><br>
+    <label>
+        <input type="radio" name="share_video1_pub" value="False">
+        No
+    </label><br><br>
+
+    <p> <b>3. ¿Qué piensa del video? Por favor, deje un comentario. </b></p>
+    <textarea name="comment_video1" maxlength="300" minlength="20" rows="4" cols="50" required></textarea><br><br>
+
+    <p> <b>4. ¿Había visto el video antes? </b></p>
+    <label>
+        <input type="radio" name="seen_video1" value="True" required>
+        Sí
+    </label><br>
+    <label>
+        <input type="radio" name="seen_video1" value="False">
+        No
+    </label><br><br>
+
+    <button type="submit">Continuar</button>
+</form>
+{% endblock %}

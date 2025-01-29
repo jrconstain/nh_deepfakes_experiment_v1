@@ -1,0 +1,33 @@
+{% extends "global/Page.html" %}
+{% block title %}Muchas gracias ¡Ya está participando en los sorteos!{% endblock %}
+
+{% block content %}
+<style>
+    p {
+        font-size: 18px;
+    }
+    label {
+        font-size: 18px;
+    }
+</style>
+<h2>Por favor, déjenos su contacto</h2>
+
+<p style="margin-top: 30px;">
+    <b>Ya está participando en los tres sorteos de $150.000 pesos, en los que usted tiene tres chances de ganar y podrá resultar ganador solo una vez.
+    Por favor, déjenos un número celular o un correo donde podamos contactarle si resultas ganador o ganadora,
+    preferiblemente un número de celular donde tenga WhatsApp o un correo que utilice permanentemente.</b>
+</p>
+<p>
+    Recuerde que los sorteos se realizarán el viernes 11 de octubre a las 4:30 p.m. y se transmitirán a través de internet. Le enviaremos el enlace para conectarse, aunque no es necesario estar presente en el sorteo, ni esto afectará sus probabilidades de ganar. Al haber completado la encuesta, ya está participando. 
+
+<form method="post">
+    <p> 
+        <b>Número celular o correo electrónico:</b>
+    </p>
+    <input type="text" name="contact" required>
+    <br><br>
+
+    <button type="submit">Finalizar</button>
+</form>
+
+{% endblock %}

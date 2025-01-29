@@ -1,0 +1,38 @@
+{% extends "global/Page.html" %}
+{% block title %}Cuestionario breve{% endblock %}
+
+{% block content %}
+<style>
+    p {
+        font-size: 18px;
+    }
+    label {
+        font-size: 18px;
+    }
+</style>
+<h2>Por favor, responda las siguientes preguntas.</h2>
+
+<br>
+<form method="post">
+    <p style="margin-top: 40px;"><b>
+        1. Juntos, un bate de béisbol y una pelota cuestan $11.000 pesos. Si el bate cuesta $10.000 pesos más que la pelota, ¿cuánto cuesta la pelota?
+    </b></p>
+    <input type="number" name="crt_question1" step="0.01" required>
+    <br><br>
+
+    <p><b>
+        2. Si estás corriendo una carrera y pasas a la persona en segundo lugar, ¿en qué lugar estás?
+    </b></p>
+    <input type="text" name="crt_question2" maxlength="30" required>
+    <br><br>
+
+    <p><b>
+        3. El padre de Emily tiene tres hijas. Las dos primeras se llaman Abril y Mayo, ¿cómo se llama la tercera?
+    </b></p>
+    <input type="text" name="crt_question3" maxlength="30" required>
+    <br><br>
+
+    <button type="submit">Continuar</button>
+</form>
+
+{% endblock %}

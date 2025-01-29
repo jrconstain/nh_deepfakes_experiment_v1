@@ -1,0 +1,118 @@
+{% extends "global/Page.html" %}
+{% block title %}Cuestionario final{% endblock %}
+
+{% block content %}
+<style>
+    p {
+        font-size: 18px;
+    }
+    label {
+        font-size: 18px;
+    }
+    span {
+        font-size: 18px;
+    }
+</style>
+
+<h2>Por favor, responde las siguientes preguntas</h2>
+
+<br><br>
+
+<form method="post">
+    <p><b>
+        1. Cuando piensan en política, las personas suelen utilizar los términos izquierda y derecha. En una escala de 1 a 10, donde 1 significa completamente a la izquierda y 10 significa completamente a la derecha, ¿dónde se ubicaría usted?
+    </b></p>
+
+    <label for="political_position">Izquierda</label>
+    <input type="range" id="political_position" name="political_position" min="1" max="10" value="5" oninput="document.getElementById('political_position_value').innerText = this.value" style="width: 300px;">
+    <label for="political_position">Derecha</label>
+    <p>Valor seleccionado: <span id="political_position_value">5</span></p>
+
+    <br><br>
+
+    <p><b>
+        2. En una escala de 0 a 5, ¿qué tan seguido usa internet y redes sociales? </b>(0 significa que no tiene redes sociales o nunca usa internet y 5 que las usa constantemente)
+    </p>
+
+    <label for="internet_usage">Nunca/no tengo</label>
+    <input type="range" id="internet_usage" name="internet_usage" min="0" max="5" value="0" oninput="document.getElementById('internet_usage_value').innerText = this.value" style="width: 300px;" required>
+    <label for="internet_usage">Constantemente</label>
+    <p>Valor seleccionado: <span id="internet_usage_value">0</span></p>
+    <br><br>
+
+    <p><b>3. ¿Consideraría alguna vez compartir con alguien noticias relacionadas con temas de salud y actualidad a través de aplicaciones de mensajería como WhatsApp o Messenger?</b></p>
+    <label>
+        <input type="radio" name="would_share_news_priv" value="True" required> Sí
+    </label><br>
+    <label>
+        <input type="radio" name="would_share_news_priv" value="False"> No
+    </label><br><br>
+
+    <p><b>4. ¿Consideraría alguna vez compartir públicamente noticias relacionadas con temas de salud y actualidad a través de redes sociales como Facebook, Instagram o Twitter?</b></p>
+    <label>
+        <input type="radio" name="would_share_news_pub" value="True" required> Sí
+    </label><br>
+    <label>
+        <input type="radio" name="would_share_news_pub" value="False"> No
+    </label><br><br>
+
+    <p><b>5. ¿Consideraría alguna vez compartir con alguien contenido tierno, como videos de perros o niños, a través de aplicaciones de mensajería como WhatsApp o Messenger?</b></p>
+    <label>
+        <input type="radio" name="would_share_videos_priv" value="True" required> Sí
+    </label><br>
+    <label>
+        <input type="radio" name="would_share_videos_priv" value="False"> No
+    </label><br><br>
+
+    <p><b>6. ¿Consideraría alguna vez compartir públicamente contenido tierno, como videos de perros o niños, a través de redes sociales como Facebook, Instagram o Twitter?</b></p>
+    <label>
+        <input type="radio" name="would_share_videos_pub" value="True" required> Sí
+    </label><br>
+    <label>
+        <input type="radio" name="would_share_videos_pub" value="False"> No
+    </label><br><br>
+
+    <p><b>7. ¿Cuántos años de educación formal ha cursado? </b> Sume los años que haya cursado en primaria, secundaria, educación superior, etc.</p>
+    <label>
+        <input type="radio" name="years_education" value="Less than 5 years" required>
+        Menos de 5 años
+    </label><br>
+    <label>
+        <input type="radio" name="years_education" value="Between 5 and 11 years">
+        Entre 5 y 11 años
+    </label><br>
+    <label>
+        <input type="radio" name="years_education" value="Between 12 and 16 years">
+        Entre 12 y 16 años
+    </label><br>
+    <label>
+        <input type="radio" name="years_education" value="More than 16 years">
+        Más de 16 años
+    </label><br><br>
+
+    <p><b>8. ¿Qué edad tiene?</b></p>
+    <input type="number" name="age" min="18" max="100" required>
+    <br><br>
+
+    <p><b>9. ¿Cuál es su género?</b></p>
+    <label>
+        <input type="radio" name="gender" value="Male" required>
+        Hombre
+    </label><br>
+    <label>
+        <input type="radio" name="gender" value="Female">
+        Mujer
+    </label><br>
+    <label>
+        <input type="radio" name="gender" value="Non-binary">
+        No binario
+    </label><br>
+    <label>
+        <input type="radio" name="gender" value="Other">
+        Otro
+    </label><br><br>
+
+    <input type="submit" value="Enviar">
+</form>
+
+{% endblock %}
