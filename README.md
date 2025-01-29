@@ -8,6 +8,7 @@ The experiment is structured to randomly assign participants into two groups: on
 
 ## Repository Structure
 
+```
 📁 Non-Harmful Deepfakes Experiment
 │
 ├── 📁 Ethics committee/       # Ethical approval document
@@ -40,7 +41,7 @@ The experiment is structured to randomly assign participants into two groups: on
 ├── Accuracy nudges on deepfakes - Preregistration.pdf  # Study preregistration document
 ├── Appendix - Accuracy nudges on deepfakes.pdf        # Additional documentation
 ├── Deepfakes_stimuli_public.xlsx                      # Questionnaires in English and Spanish
-
+```
 
 ## How to Use
 
